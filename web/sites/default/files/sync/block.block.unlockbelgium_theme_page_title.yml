@@ -1,0 +1,20 @@
+uuid: 2a48bb85-8745-42c3-8f8b-74f4c037c385
+langcode: en
+status: true
+dependencies:
+  theme:
+    - unlockbelgium_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: unlockbelgium_theme_page_title
+theme: unlockbelgium_theme
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }
