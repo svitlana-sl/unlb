@@ -1,0 +1,194 @@
+uuid: 734551c2-aedc-48f0-9093-aa7501162135
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.location_card.field_category
+    - field.field.node.location_card.field_description
+    - field.field.node.location_card.field_flag
+    - field.field.node.location_card.field_geolocation
+    - field.field.node.location_card.field_like
+    - field.field.node.location_card.field_link_to_location_top
+    - field.field.node.location_card.field_subtitle
+    - field.field.node.location_card.field_upload_image
+    - image.style.thumbnail
+    - node.type.location_card
+  module:
+    - image
+    - leaflet
+    - link
+    - path
+id: node.location_card.default
+targetEntityType: node
+bundle: location_card
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_category:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_flag:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_geolocation:
+    type: leaflet_widget_default
+    weight: 7
+    region: content
+    settings:
+      map:
+        leaflet_map: 'OSM Mapnik'
+        height: 400
+        auto_center: 1
+        map_position:
+          force: false
+          center:
+            lat: 50.5010789
+            lon: 4.4764595
+          zoomControlPosition: topleft
+          zoom: 5
+          minZoom: 1
+          maxZoom: 18
+          zoomFiner: 0
+        scroll_zoom_enabled: 1
+      input:
+        show: false
+        readonly: false
+      toolbar:
+        position: topright
+        marker: defaultMarker
+        drawPolyline: true
+        drawRectangle: true
+        drawPolygon: true
+        drawCircle: false
+        drawText: false
+        editMode: true
+        dragMode: true
+        cutPolygon: false
+        removalMode: true
+        rotateMode: false
+      reset_map:
+        control: false
+        options: '{"position":"topleft","title":"Reset View"}'
+      map_scale:
+        control: false
+        options: '{"position":"bottomright","maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":false}'
+      fullscreen:
+        control: false
+        options: '{"position":"topleft","pseudoFullscreen":false}'
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+      locate:
+        control: true
+        options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
+        automatic: false
+      geocoder:
+        control: false
+        settings:
+          popup: false
+          position: topright
+          input_size: 20
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          options: ''
+      geometry_validation: '1'
+      feature_properties:
+        values: ''
+    third_party_settings: {  }
+  field_like:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_link_to_location_top:
+    type: link_default
+    weight: 8
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_upload_image:
+    type: image_image
+    weight: 6
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: 6143f85a-3f48-4832-a739-9373cfcd39a6
+langcode: en
+status: true
+dependencies: {  }
+name: Provincies
+vid: provincies
+description: 'Provinces of Belgium'
+weight: 0
+new_revision: false

@@ -1,0 +1,9 @@
+uuid: 498532a3-9a81-4f75-949d-75140e39c4be
+langcode: en
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: 'Location types'
+weight: 0
+new_revision: false

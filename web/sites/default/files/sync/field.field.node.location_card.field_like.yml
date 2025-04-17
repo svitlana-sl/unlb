@@ -1,0 +1,21 @@
+uuid: 59d020f4-a32b-4c22-b4c7-52d3b64f5f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_like
+    - node.type.location_card
+id: node.location_card.field_like
+field_name: field_like
+entity_type: node
+bundle: location_card
+label: Like
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Like
+  off_label: Dislike
+field_type: boolean

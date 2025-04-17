@@ -1,0 +1,21 @@
+uuid: 86bf69ba-c618-423c-bcc9-60bbed81187a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flag
+    - node.type.location_card
+id: node.location_card.field_flag
+field_name: field_flag
+entity_type: node
+bundle: location_card
+label: Flag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Visited
+  off_label: 'Not visited'
+field_type: boolean
