@@ -1,26 +1,58 @@
-<header class="bg-gray-100 text-black p-4">
+<header class="text-black p-4 bg-white shadow">
   <div class="container mx-auto flex justify-between items-center">
 
+    {# Logo #}
     <a href="/" class="block">
       <img src="{{ directory }}/images/logo-ub.png" alt="UnlockBelgium logo" class="h-10" />
     </a>
 
-    <nav class="flex items-center space-x-6 text-sm">
-      <a href="/" class="hover:underline">Home</a>
-      <a href="/node/add/location_card" class="hover:underline">Add Location</a>
+    {# Right menu with icons #}
+    <nav class="flex gap-4 items-center font-semibold text-sm">
+      
+      <!-- Kaart -->
+      <a href="/map" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
+        <div class="w-12 h-12 rounded-full border-2 flex items-center justify-center shadow" style="border-color: #f1981d;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 384 512" fill="currentColor">
+            <path d="M172.3 501.7C27 291 0 269.4 0 192 0 86 86 0 192 0s192 86 192 192c0 77.4-27 99-172.3 309.7a24 24 0 0 1-39.4 0zM192 272a80 80 0 1 0-80-80 80 80 0 0 0 80 80z"/>
+          </svg>
+        </div>
+        <span class="mt-1 text-[#f1981d]">Kaart</span>
+      </a>
+
+      <!-- Voeg toe -->
+      <a href="/node/add/location_card" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
+        <div class="w-12 h-12 rounded-full border-2 flex items-center justify-center shadow" style="border-color: #f1981d;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512" fill="currentColor">
+            <path d="M362.7 19.3c-6-6-14.3-9.4-22.6-9.3s-16.6 3.4-22.6 9.4L56 280v96h96L440.7 87.3c6-6 9.3-14.2 9.3-22.6s-3.4-16.6-9.4-22.6l-50.6-50.7z"/>
+          </svg>
+        </div>
+        <span class="mt-1 text-[#f1981d]">Voeg toe</span>
+      </a>
+
+      <!-- Profiel -->
+      <a href="/auth" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
+        <div class="w-12 h-12 rounded-full border-2 flex items-center justify-center shadow" style="border-color: #f1981d;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512" fill="currentColor">
+            <path d="M256 256a96 96 0 1 0-96-96 96 96 0 0 0 96 96zm0 32c-64 0-192 32-192 96v32h384v-32c0-64-128-96-192-96z"/>
+          </svg>
+        </div>
+        <span class="mt-1 text-[#f1981d]">Profiel</span>
+      </a>
+
+      <!-- Menu -->
+      <a href="/" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
+        <div class="w-12 h-12 rounded-full border-2 flex items-center justify-center shadow" style="border-color: #f1981d;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512" fill="currentColor">
+            <path d="M80 96h352c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 96h352c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 96h352c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
+          </svg>
+        </div>
+        <span class="mt-1 text-[#f1981d]">Menu</span>
+      </a>
     </nav>
-    
-    {% if page.secondary_menu %}
-      <div class="flex items-center gap-4 text-sm">
-        {{ page.secondary_menu }}
-      </div>
-    {% endif %}
 
   </div>
 </header>
 
-
-<main class="container mx-auto p-4">
+<main class="container mx-auto px-4 py-8">
   {{ page.content }}
 </main>
-

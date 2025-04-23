@@ -24,3 +24,5 @@ web/sites/default/files/js/
 *.log
 *.tmp
 *.swp
+/.editorconfig
+/.gitattributes
