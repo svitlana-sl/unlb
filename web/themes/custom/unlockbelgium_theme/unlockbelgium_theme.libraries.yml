@@ -107,3 +107,12 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+global-scripts:
+  version: 1.x
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - flag/drupal.flag

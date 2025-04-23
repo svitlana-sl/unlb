@@ -9,7 +9,7 @@
 # Custom theme dependencies
 /web/themes/unlockbelgium_theme/node_modules/
 # Uploaded files
-#/web/sites/default/files/
+/web/sites/default/files/
 # Local development files
 web/sites/*/settings.local.php
 web/sites/*/services.local.yml
@@ -24,3 +24,5 @@ web/sites/default/files/js/
 *.log
 *.tmp
 *.swp
+/.editorconfig
+/.gitattributes

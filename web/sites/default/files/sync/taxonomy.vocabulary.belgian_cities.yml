@@ -1,9 +1,0 @@
-uuid: 38c86dbf-55e8-49ca-ab48-f197f525e959
-langcode: en
-status: true
-dependencies: {  }
-name: 'Belgian Cities'
-vid: belgian_cities
-description: null
-weight: 0
-new_revision: false
