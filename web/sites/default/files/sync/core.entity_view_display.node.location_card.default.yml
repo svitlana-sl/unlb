@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.location_card.field_geolocation
     - field.field.node.location_card.field_like
     - field.field.node.location_card.field_link_to_location_top
+    - field.field.node.location_card.field_metatag
     - field.field.node.location_card.field_subtitle
     - field.field.node.location_card.field_upload_image
     - node.type.location_card
@@ -16,6 +17,7 @@ dependencies:
     - image
     - leaflet
     - link
+    - metatag
     - user
 id: node.location_card.default
 targetEntityType: node
@@ -165,6 +167,13 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
   field_subtitle:
     type: string
     label: above
@@ -189,4 +198,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  langcode: true

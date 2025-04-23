@@ -1,0 +1,22 @@
+uuid: 95c9e0f1-371c-4c96-ba72-1a4a4e277c47
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: language_path_pattern
+label: 'language path pattern'
+type: 'canonical_entities:node'
+pattern: '[node:title]/[node:field_subtitle]'
+selection_criteria:
+  949f512e-1943-46aa-9945-ae6d2ef2d48e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 949f512e-1943-46aa-9945-ae6d2ef2d48e
+    context_mapping:
+      node: node
+    bundles:
+      location_card: location_card
+selection_logic: and
+weight: -5
+relationships: {  }

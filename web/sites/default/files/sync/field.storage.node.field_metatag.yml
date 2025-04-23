@@ -1,17 +1,16 @@
-uuid: 251c4eea-3915-4345-9f88-a2af399261e0
+uuid: 6e4807e3-73a6-4498-b161-1cd23d2f83b9
 langcode: en
 status: true
 dependencies:
   module:
+    - metatag
     - node
-    - taxonomy
-id: node.field_category
-field_name: field_category
+id: node.field_metatag
+field_name: field_metatag
 entity_type: node
-type: entity_reference
-settings:
-  target_type: taxonomy_term
-module: core
+type: metatag
+settings: {  }
+module: metatag
 locked: false
 cardinality: 1
 translatable: true
