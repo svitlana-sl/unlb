@@ -1,0 +1,40 @@
+uuid: 6d5248a1-2c2c-43a1-a808-821613aab4eb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:profile_menu:a81729d5-6a4c-4b96-aff0-33ceb31c83ff'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - unlockbelgium_theme
+id: unlockbelgium_theme_menublock
+theme: unlockbelgium_theme
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:a81729d5-6a4c-4b96-aff0-33ceb31c83ff'
+settings:
+  id: 'block_content:a81729d5-6a4c-4b96-aff0-33ceb31c83ff'
+  label: 'Profile Menu Block '
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator

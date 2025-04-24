@@ -1,0 +1,15 @@
+uuid: 2b345356-f900-4d1b-a83c-46730c93998a
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.ben_ik_geweest
+  module:
+    - flag
+id: flag_action.ben_ik_geweest_flag
+label: Done
+type: node
+plugin: 'flag_action:ben_ik_geweest_flag'
+configuration:
+  flag_id: ben_ik_geweest
+  flag_action: flag

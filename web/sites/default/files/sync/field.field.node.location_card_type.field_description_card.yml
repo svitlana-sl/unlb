@@ -1,0 +1,19 @@
+uuid: 6bd1583d-666f-4f9b-8d7a-917e7abeb375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_card
+    - node.type.location_card_type
+id: node.location_card_type.field_description_card
+field_name: field_description_card
+entity_type: node
+bundle: location_card_type
+label: 'Description card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

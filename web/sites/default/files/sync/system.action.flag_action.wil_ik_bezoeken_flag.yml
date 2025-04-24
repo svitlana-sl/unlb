@@ -1,0 +1,15 @@
+uuid: 04213bfc-bb1d-4262-8df1-a09d3e4738f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.wil_ik_bezoeken
+  module:
+    - flag
+id: flag_action.wil_ik_bezoeken_flag
+label: Like
+type: node
+plugin: 'flag_action:wil_ik_bezoeken_flag'
+configuration:
+  flag_id: wil_ik_bezoeken
+  flag_action: flag

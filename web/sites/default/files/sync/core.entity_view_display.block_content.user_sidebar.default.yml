@@ -1,0 +1,23 @@
+uuid: 03abc9ed-fc2e-4c3b-9a3e-54be28ec83f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.user_sidebar
+    - field.field.block_content.user_sidebar.body
+  module:
+    - text
+id: block_content.user_sidebar.default
+targetEntityType: block_content
+bundle: user_sidebar
+mode: default
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

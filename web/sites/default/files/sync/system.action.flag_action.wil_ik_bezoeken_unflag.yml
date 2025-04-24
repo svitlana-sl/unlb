@@ -1,0 +1,15 @@
+uuid: c84fc080-230c-4b6e-8c8f-d0a9b008c049
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.wil_ik_bezoeken
+  module:
+    - flag
+id: flag_action.wil_ik_bezoeken_unflag
+label: Unlike
+type: node
+plugin: 'flag_action:wil_ik_bezoeken_unflag'
+configuration:
+  flag_id: wil_ik_bezoeken
+  flag_action: unflag
