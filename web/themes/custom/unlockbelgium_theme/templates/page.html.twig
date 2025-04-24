@@ -6,6 +6,20 @@
       <img src="{{ directory }}/images/logo-ub.png" alt="UnlockBelgium logo" class="h-10" />
     </a>
 
+      {# Search and filter section #}
+    <form class="flex flex-wrap items-center justify-center gap-3 bg-white border border-gray-200 rounded-full px-6 py-3 shadow">
+      <input type="text" name="title" placeholder="In de buurt van" class="flex-grow border-none focus:outline-none focus:ring-0 text-sm w-64" />
+      <select name="category" class="rounded-full border border-gray-300 px-3 py-2 text-sm">
+        <option value="">Categorieën</option>
+        <option value="1">Natuur</option>
+        <option value="2">Museum</option>
+        <option value="3">Eten & Drinken</option>
+      </select>
+      <button type="submit" class="px-4 py-2 border border-[#f1981d] text-[#f1981d] rounded-full hover:bg-[#f1981d] hover:text-white transition">
+        Zoek
+      </button>
+    </form>
+
     {# Right menu with icons #}
     <nav class="flex gap-4 items-center font-semibold text-sm">
       
@@ -20,24 +34,26 @@
       </a>
 
       <!-- Voeg toe -->
-      <a href="/node/add/location_card" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
-        <div class="w-12 h-12 rounded-full border-2 flex items-center justify-center shadow" style="border-color: #f1981d;">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512" fill="currentColor">
-            <path d="M362.7 19.3c-6-6-14.3-9.4-22.6-9.3s-16.6 3.4-22.6 9.4L56 280v96h96L440.7 87.3c6-6 9.3-14.2 9.3-22.6s-3.4-16.6-9.4-22.6l-50.6-50.7z"/>
-          </svg>
-        </div>
-        <span class="mt-1 text-[#f1981d]">Voeg toe</span>
-      </a>
+      <a href="/node/add/location_card_type" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
+  <div class="w-12 h-12 rounded-full border-2 flex items-center justify-center shadow" style="border-color: #f1981d;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512" fill="currentColor">
+      <path d="M362.7 19.3c-6-6-14.3-9.4-22.6-9.3s-16.6 3.4-22.6 9.4L56 280v96h96L440.7 87.3c6-6 9.3-14.2 9.3-22.6s-3.4-16.6-9.4-22.6l-50.6-50.7z"/>
+    </svg>
+  </div>
+  <span class="mt-1 text-[#f1981d]">Voeg toe</span>
+</a>
+
 
       <!-- Profiel -->
-      <a href="/auth" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
-        <div class="w-12 h-12 rounded-full border-2 flex items-center justify-center shadow" style="border-color: #f1981d;">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512" fill="currentColor">
-            <path d="M256 256a96 96 0 1 0-96-96 96 96 0 0 0 96 96zm0 32c-64 0-192 32-192 96v32h384v-32c0-64-128-96-192-96z"/>
-          </svg>
-        </div>
-        <span class="mt-1 text-[#f1981d]">Profiel</span>
-      </a>
+      <a href="/my-locations" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
+  <div class="w-12 h-12 rounded-full border-2 flex items-center justify-center shadow" style="border-color: #f1981d;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512" fill="currentColor">
+      <path d="M256 256a96 96 0 1 0-96-96 96 96 0 0 0 96 96zm0 32c-64 0-192 32-192 96v32h384v-32c0-64-128-96-192-96z"/>
+    </svg>
+  </div>
+  <span class="mt-1 text-[#f1981d]">Profiel</span>
+</a>
+
 
       <!-- Menu -->
       <a href="/" class="flex flex-col items-center text-[#f1981d] hover:text-[#e38410]">
