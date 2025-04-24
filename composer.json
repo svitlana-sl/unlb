@@ -25,7 +25,9 @@
         "drupal/gin": "^4.0",
         "drupal/gin_login": "^2.1",
         "drupal/leaflet": "^10.2",
+        "drupal/metatag": "^2.1",
         "drupal/pathauto": "^1.13",
+        "drupal/redirect": "^1.11",
         "drupal/smtp": "^1.4",
         "drupal/views_infinite_scroll": "^2.0",
         "drush/drush": "^13.5"
