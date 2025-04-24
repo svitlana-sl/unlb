@@ -1,0 +1,11 @@
+uuid: b9cbb870-4ce2-4c5a-aa51-ea5dacac9243
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.location_card_type
+id: node.location_card_type
+target_entity_type_id: node
+target_bundle: location_card_type
+default_langcode: site_default
+language_alterable: false

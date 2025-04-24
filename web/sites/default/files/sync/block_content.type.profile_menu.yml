@@ -1,0 +1,8 @@
+uuid: 8479a864-7b14-44c5-8ba0-070646fe5bd3
+langcode: en
+status: true
+dependencies: {  }
+id: profile_menu
+label: 'Profile Menu Block'
+revision: false
+description: null

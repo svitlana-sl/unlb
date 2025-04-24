@@ -1,0 +1,15 @@
+uuid: a9750f98-e2c2-42ec-bd3d-09841ec460bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.ben_ik_geweest
+  module:
+    - flag
+id: flag_action.ben_ik_geweest_unflag
+label: 'Not done'
+type: node
+plugin: 'flag_action:ben_ik_geweest_unflag'
+configuration:
+  flag_id: ben_ik_geweest
+  flag_action: unflag

@@ -1,0 +1,8 @@
+uuid: 231e269e-2ff8-4932-99f0-da96f744caca
+langcode: en
+status: true
+dependencies: {  }
+id: user_sidebar
+label: 'User Sidebar'
+revision: false
+description: null

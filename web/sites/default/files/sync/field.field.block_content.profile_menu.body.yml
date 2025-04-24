@@ -1,0 +1,24 @@
+uuid: 7007066b-1885-431f-81a3-e3f2c41c3052
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile_menu
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.profile_menu.body
+field_name: body
+entity_type: block_content
+bundle: profile_menu
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
