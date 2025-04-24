@@ -1,71 +1,26 @@
-<article class="relative text-black">
 
-  {# Full background image on top #}
-  {% if content.field_upload_image %}
-    <div class="h-[70vh] w-full overflow-hidden">
+<article class="text-black">
+  <div class="content space-y-4">
+
+    {{ title_prefix }}
+    <h1 class="text-2xl font-bold">{{ label }}</h1>
+    {{ title_suffix }}
+
+    {% if content.field_upload_image %}
       {{ content.field_upload_image }}
-    </div>
-  {% endif %}
-
-  {# Title #}
-  {% if content.title %}
-    <h1 class="inline-block bg-orange-500 text-xl font-bold px-4 py-2 rounded-md shadow mt-4 ml-4">
-      {{ content.title }}
-    </h1>
-  {% endif %}
-
-  {# Flags (like/visited) under title #}
-  <div class="absolute top-5 right-5 flex gap-2">
-    {% if content.flag_like_location %}
-      <div class="bg-white/80 rounded-full px-3 py-1 shadow">
-        {{ content.flag_like_location }}
-      </div>
-    {% endif %}
-    {% if content.flag_done_location %}
-      <div class="bg-white/80 rounded-full px-3 py-1 shadow">
-        {{ content.flag_done_location }}
-      </div>
-    {% endif %}
-  </div>
-
-  {# Content section #}
-  <div class="bg-white p-8 mt-[-50px] relative z-10 rounded-t-2xl shadow-md">
-
-    {# Subtitle #}
-    {% if content.field_subtitle %}
-      <div class="mb-4 text-sm font-medium text-gray-600">
-        {{ content.field_subtitle }}
-      </div>
     {% endif %}
 
-    {# Description #}
     {% if content.field_description %}
-      <div class="prose max-w-none mb-6">
-        {{ content.field_description }}
-      </div>
+      {{ content.field_description }}
     {% endif %}
+{% if content.field_geolocation %}
+  <div class="my-6">
+    {{ content.field_geolocation }}
+  </div>
+{% else %}
+  <div class="text-red-600">Geolocation not found</div>
+{% endif %}
 
-    {# Tags #}
-    {% if content.field_category %}
-      <div class="mb-6">
-        {{ content.field_category }}
-      </div>
-    {% endif %}
-
-    {# Image gallery if available #}
-    {% if content.field_upload_image_1 %}
-      <div class="grid grid-cols-4 gap-4">
-        {{ content.field_upload_image_1 }}
-      </div>
-    {% endif %}
 
   </div>
-
-  {# Map (must be outside layout-blocks to render properly) #}
-  {% if content.field_geolocation %}
-    <div class="mt-10 px-8">
-      {{ content.field_geolocation }}
-    </div>
-  {% endif %}
-
 </article>
