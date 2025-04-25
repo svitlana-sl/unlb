@@ -29,24 +29,41 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{% for field in fields -%}
-  {{ field.separator }}
-  {%- if field.wrapper_element -%}
-    <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
-  {%- endif %}
-  {%- if field.label -%}
-    {%- if field.label_element -%}
-      <{{ field.label_element }}{{ field.label_attributes }}>{{ field.label }}{{ field.label_suffix }}</{{ field.label_element }}>
-    {%- else -%}
-      {{ field.label }}{{ field.label_suffix }}
-    {%- endif %}
-  {%- endif %}
-  {%- if field.element_type -%}
-    <{{ field.element_type }}{{ field.element_attributes }}>{{ field.content }}</{{ field.element_type }}>
-  {%- else -%}
-    {{ field.content }}
-  {%- endif %}
-  {%- if field.wrapper_element -%}
-    </{{ field.wrapper_element }}>
-  {%- endif %}
-{%- endfor %}
+{#
+ * Custom styled version of views-view-fields.html.twig
+#}
+
+<div class="relative rounded-2xl overflow-hidden shadow-md group hover:scale-[1.02] transition duration-300">
+
+  {# IMAGE #}
+  {% if fields.field_foto.content %}
+    <div class="w-full block">
+        {{ fields.field_foto.content }}
+    </div>
+  {% else %}
+    <div class="w-full aspect-[3/4] bg-gray-200 flex items-center justify-center text-sm text-gray-500">
+      No image
+    </div>
+  {% endif %}
+
+
+  {# TITLE #}
+  <div class="absolute bottom-3 left-3">
+    {% if fields.title.content %}
+     <div class="inline-block bg-white text-black text-[20px] leading-tight px-4 py-2 rounded-xl shadow font-bold font-sans">
+  {{ fields.title.content }}
+</div>
+    {% else %}
+      <p class="text-red-400 text-sm">No title</p>
+    {% endif %}
+  </div>
+  <div class="absolute top-3 right-3 flex gap-2">
+  {% if fields.flag_like_location %}
+    {{ fields.flag_like_location.content }}
+  {% endif %}
+  {% if fields.flag_done_location %}
+    {{ fields.flag_done_location.content }}
+  {% endif %}
+</div>
+
+</div>

@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.location_card_type
   module:
     - comment
     - contact
     - file
     - filter
+    - flag
+    - node
     - search
     - shortcut
     - system
@@ -23,8 +26,15 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'create location_card_type content'
   - 'delete own files'
+  - 'edit own location_card_type content'
+  - 'flag ben_ik_geweest'
+  - 'flag wil_ik_bezoeken'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'unflag ben_ik_geweest'
+  - 'unflag wil_ik_bezoeken'
   - 'use text format basic_html'
+  - 'view own unpublished content'

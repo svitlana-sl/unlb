@@ -1,0 +1,22 @@
+uuid: 472faffd-3a90-4d7f-bcc4-63ee52cf1c59
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_path_pattern
+label: 'content path pattern'
+type: 'canonical_entities:node'
+pattern: '[node:title]/[node:field_subtitle_card]'
+selection_criteria:
+  8fb5bd25-3154-409b-8f0b-93ddf281991c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8fb5bd25-3154-409b-8f0b-93ddf281991c
+    context_mapping:
+      node: node
+    bundles:
+      location_card_type: location_card_type
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,49 @@
+{{ attach_library('views/views.responsive-grid') }}
+
+{%
+  set classes = [
+    'views-view-responsive-grid',
+    'views-view-responsive-grid--' ~ options.alignment,
+  ]
+%}
+
+{% set responsive_grid_styles = [
+  '--views-responsive-grid--column-count:' ~ options.columns ~ ';',
+  '--views-responsive-grid--cell-min-width:' ~ options.cell_min_width ~ 'px;',
+  '--views-responsive-grid--layout-gap:' ~ options.grid_gutter ~ 'px;',
+] %}
+
+<div class="relative rounded-2xl overflow-hidden shadow-md group hover:scale-[1.02] transition duration-300">
+
+  {# IMAGE як тег <img> з класами #}
+  {% if fields.field_foto.content %}
+    <div class="w-full block">
+        {{ fields.field_foto.content }}
+    </div>
+  {% else %}
+    <div class="w-full aspect-[3/4] bg-gray-200 flex items-center justify-center text-sm text-gray-500">
+      No image
+    </div>
+  {% endif %}
+
+
+  {# TITLE #}
+  <div class="absolute bottom-3 left-3">
+    {% if fields.title.content %}
+     <div class="inline-block bg-white text-black text-[20px] leading-tight px-4 py-2 rounded-xl shadow font-bold font-sans">
+  {{ fields.title.content }}
+</div>
+    {% else %}
+      <p class="text-red-400 text-sm">No title</p>
+    {% endif %}
+  </div>
+  <div class="absolute top-3 right-3 flex gap-2">
+  {% if fields.flag_like_location %}
+    {{ fields.flag_like_location.content }}
+  {% endif %}
+  {% if fields.flag_done_location %}
+    {{ fields.flag_done_location.content }}
+  {% endif %}
+</div>
+
+</div>
