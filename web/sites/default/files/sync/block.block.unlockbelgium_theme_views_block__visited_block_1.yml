@@ -1,0 +1,38 @@
+uuid: 18b8b542-ff82-4cf7-922d-41ee9c4ada08
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.visited
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - unlockbelgium_theme
+id: unlockbelgium_theme_views_block__visited_block_1
+theme: unlockbelgium_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:visited-block_1'
+settings:
+  id: 'views_block:visited-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
