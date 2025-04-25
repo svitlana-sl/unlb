@@ -1,0 +1,18 @@
+uuid: aa0a4915-a6c9-4163-858d-5189a330a5c3
+langcode: en
+status: true
+dependencies: {  }
+id: node__location_card_type
+label: 'Content: Location Card'
+tags:
+  description: '[node:description_card]'
+  image_src: '[node:field_foto]'
+  og_description: '[node:description_card] '
+  og_image: '[node:field_foto] '
+  og_title: '[node:title] '
+  robots: 'max-image-preview:standard'
+  title: '[node:title] | UnlockBelgium'
+  twitter_cards_description: '[node:description_card] '
+  twitter_cards_image: '[node:field_foto] '
+  twitter_cards_title: '[node:title] '
+  twitter_cards_type: summary_large_image

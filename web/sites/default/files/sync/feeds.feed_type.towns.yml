@@ -1,0 +1,65 @@
+uuid: b9b0590a-dc9f-426f-83a6-ca44a6767be9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.belgian_towns.field_postcode
+    - taxonomy.vocabulary.belgian_towns
+  module:
+    - taxonomy
+label: Towns
+id: towns
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: belgian_towns
+  langcode: nl
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  postal:
+    value: postal
+    label: postal
+    machine_name: postal
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+mappings:
+  -
+    target: field_postcode
+    map:
+      value: postal
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }

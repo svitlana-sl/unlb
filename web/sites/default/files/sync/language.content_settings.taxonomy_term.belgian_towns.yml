@@ -1,0 +1,11 @@
+uuid: bab6041b-1857-475f-8095-ae6e4bd042a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.belgian_towns
+id: taxonomy_term.belgian_towns
+target_entity_type_id: taxonomy_term
+target_bundle: belgian_towns
+default_langcode: nl
+language_alterable: false

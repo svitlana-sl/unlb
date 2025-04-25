@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.article
+    - node.type.location_card_type
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
@@ -29,6 +30,7 @@ permissions:
   - 'access toolbar'
   - 'administer url aliases'
   - 'create article content'
+  - 'create location_card_type content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
@@ -37,6 +39,7 @@ permissions:
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit any location_card_type content'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'

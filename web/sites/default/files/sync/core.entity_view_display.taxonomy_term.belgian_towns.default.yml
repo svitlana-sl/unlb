@@ -1,0 +1,33 @@
+uuid: 6d465b74-e358-4aa7-b2ef-cc909bf12b73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.belgian_towns.feeds_item
+    - field.field.taxonomy_term.belgian_towns.field_postcode
+    - taxonomy.vocabulary.belgian_towns
+  module:
+    - text
+id: taxonomy_term.belgian_towns.default
+targetEntityType: taxonomy_term
+bundle: belgian_towns
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_postcode:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  feeds_item: true
+  langcode: true

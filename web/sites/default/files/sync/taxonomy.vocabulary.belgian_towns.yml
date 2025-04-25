@@ -1,0 +1,9 @@
+uuid: 2d6ce160-4fad-48c1-aeaf-81047d4364a9
+langcode: nl
+status: true
+dependencies: {  }
+name: 'Belgian towns'
+vid: belgian_towns
+description: null
+weight: 0
+new_revision: false
